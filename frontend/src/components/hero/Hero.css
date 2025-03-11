@@ -1,0 +1,53 @@
+.hero {
+    position: relative;
+    height: 30rem;
+    background: url("../../assets/img/bank-tree.jpeg") no-repeat;
+    background-position: 0 -5rem;
+    background-size: cover;
+}
+
+.hero-content {
+    position: relative;
+    top: 3.2rem;
+    width: 26.4rem;
+    margin: 0 auto;
+    padding: 3.2rem;
+    background: white;
+    text-align: left;
+}
+
+.hero-content .subtitle {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.hero-content .text {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: 1.44rem;
+}
+
+@media (min-width: 920px) {
+    .hero {
+        height: 40rem;
+        background-position: 0% 33%;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        width: 36.4rem;
+        margin: 3.2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 2.4rem;
+    }
+
+    .hero-content .text {
+        margin-top: 2rem;
+        font-size: 1.92rem;
+    }
+}

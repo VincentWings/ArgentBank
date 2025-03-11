@@ -1,0 +1,85 @@
+/**
+ * Global CSS Variables
+ * Define reusable color and font variables for consistent styling across the app.
+ */
+ :root {
+  --color-black: #2c3e50;
+  --color-black-alt: #222;
+  --color-black-alt2: #12002b;
+  --color-white: #ffffff;
+  --color-green: #42b983;
+  --color-green-alt: #00bc77;
+  --color-red: #e20000;
+  --color-grey-light: #cccccc;
+  --font-primary: "Avenir", Helvetica, Arial, sans-serif;
+  --font-size-base: 1.6rem;
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML Settings */
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: scroll;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-optical-sizing: auto;
+  color: var(--color-black);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 3.2rem;
+}
+
+a {
+  color: var(--color-green);
+}
+
+/* Screen readers only */
+.sr-only {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+.bg-dark {
+  background-color: var(--color-black-alt2);
+}

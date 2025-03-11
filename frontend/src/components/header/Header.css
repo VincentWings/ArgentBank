@@ -1,0 +1,38 @@
+.main-nav {
+  display: flex;
+  padding: 0.5rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav a {
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.main-nav a.router-link-exact-active {
+  color: var(--color-green);
+}
+
+.main-nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav-logo-image {
+  width: 200px;
+  max-width: 100%;
+}
+
+.main-nav-item {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.main-nav-item:hover {
+  text-decoration: underline;
+}
+
+.main-nav-item i {
+  margin-right: .5rem;
+}

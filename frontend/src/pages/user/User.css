@@ -1,0 +1,162 @@
+.account {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2.4rem;
+  box-sizing: border-box;
+  text-align: left;
+  border: 0.1rem solid black;
+  background-color: var(--color-white);
+}
+
+.account-amount {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.account-amount-description {
+  margin: 0;
+}
+
+.account-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.account-content-wrapper {
+  flex: 1;
+  width: 100%;
+}
+
+.edit-button {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  border-color: var(--color-green-alt);
+  background-color: var(--color-green-alt);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.transaction-button {
+  display: block;
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 0.8rem;
+  font-size: 1.76rem;
+  font-weight: bold;
+  border-color: var(--color-green-alt);
+  background-color: var(--color-green-alt);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.edit-form {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.error-message {
+    color: var(--color-red);
+}
+
+.input-container,
+.button-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-container input,
+.button-container button {
+  padding: .8rem;
+}
+
+.input-container input {
+    transition: all ease-in-out .3s;
+}
+
+.input-container input:focus,
+.input-container input:focus-visible {
+    outline: none;
+}
+
+.input-container input:focus-within {
+    border-color: var(--color-grey-light);
+}
+
+.input-container input:nth-child(1),
+.button-container button:nth-child(1) {
+    margin-left: auto;
+}
+
+.input-container input {
+    width: 20rem;
+    border: .2rem solid var(--color-white);
+}
+
+.input-container input::placeholder {
+    color: grey;
+}
+
+.input-container input.error {
+    border-color: var(--color-red);
+}
+
+.button-container button {
+    width: 13rem;
+}
+
+button {
+    color: var(--color-green-alt);
+    background: var(--color-white);
+    font-weight: bold;
+    border: .2rem solid var(--color-green-alt);
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--color-white);
+    background: var(--color-green-alt);
+    border: .2rem solid var(--color-green-alt);
+}
+
+button:disabled {
+    color: var(--color-white);
+    background: var(--color-grey-light) !important;
+    border-color: var(--color-grey-light) !important;
+}
+
+@media (min-width: 720px) {
+  .account {
+    flex-direction: row;
+  }
+
+  .account-content-wrapper.cta {
+    flex: 0;
+  }
+
+  .transaction-button {
+    width: 20rem;
+  }
+}
