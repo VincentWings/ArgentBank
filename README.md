@@ -41,6 +41,8 @@ cd backend
 npm install  
 # Start the server  
 npm run dev:server
+# Populate database with two users
+npm run populate-db
 ```  
 The website will be available at [http://localhost:3001](http://localhost:3001)  
 
@@ -50,8 +52,6 @@ cd frontend
 npm install  
 # Start the React application  
 npm run dev
-# Populate database with two users
-npm run populate-db
 ```  
 The application will be accessible at [http://localhost:5173/](http://localhost:5173/)  
 
