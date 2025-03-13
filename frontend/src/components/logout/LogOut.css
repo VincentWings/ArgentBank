@@ -1,0 +1,18 @@
+.btn-logout {
+    padding: 0;
+    color: var(--color-black) !important;
+    background: none !important;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none !important;
+}
+
+.btn-logout:hover {
+    padding: 0;
+    color: inherit;
+    background: inherit;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: inherit;
+    text-decoration: underline;
+}

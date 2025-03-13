@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { logingOut } from '../../features/auth/loginSlice'
 import { profileOut } from '../../features/auth/userSlice'
 import { useNavigate } from 'react-router-dom'
+import './LogOut.css'
 
 /**
  * LogOut Component - Handles user logout process
@@ -36,8 +37,8 @@ function LogOut() {
   }
 
   return (
-    <button onClick={handleLogout}>
-      Log Out
+    <button onClick={handleLogout} className='btn-logout'>
+      <i class="fa fa-sign-out"></i> Sign Out
     </button>
   )
 }
