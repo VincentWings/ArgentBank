@@ -2,7 +2,7 @@
 
 Argent Bank is a modern banking application that allows users to securely authenticate, manage their accounts, and track transactions. Built with **React** and **Redux**, this project integrates with a REST API to provide a seamless banking experience.  
 
-## 🌟 Features  
+## Features  
 
 ### 🔐 **User Authentication**  
 - Secure login and logout functionality.  
