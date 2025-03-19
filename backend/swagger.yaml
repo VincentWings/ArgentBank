@@ -166,20 +166,15 @@ paths:
           description: Account not found
 
   # ✅ Transactions Module
-  /user/accounts/{id}/transactions:
+  /user/accounts/transactions:
     get:
       security:
         - Bearer: []
       tags:
         - Transactions Module
-      summary: Get all transactions for an account
-      description: Returns all transactions for a specific account.
+      summary: Get all transactions grouped by account type
+      description: Returns all transactions grouped by type of account, allowing filtering by the current month.
       parameters:
-        - name: id
-          in: path
-          required: true
-          type: string
-          description: Account ID
         - name: month
           in: query
           required: false
@@ -189,13 +184,13 @@ paths:
         - application/json
       responses:
         '200':
-          description: Transactions retrieved successfully
+          description: Transactions retrieved successfully, grouped by account type
           schema:
-            $ref: '#/definitions/TransactionsResponse'
+            $ref: '#/definitions/TransactionsGroupedResponse'
         '401':
           description: Unauthorized
-        '404':
-          description: Account not found
+        '500':
+          description: Internal Server Error
 
   /user/accounts/{id}/transactions/{transactionID}:
     get:
@@ -381,3 +376,28 @@ definitions:
         type: string
       notes:
         type: string
+
+  UpdateTransaction:
+    type: object
+    properties:
+      category:
+        type: string
+        description: The category of the transaction
+      notes:
+        type: string
+        description: Additional notes for the transaction
+
+  TransactionsGroupedResponse:
+    type: object
+    properties:
+      transactions:
+        type: array
+        items:
+          type: object
+          properties:
+            accountType:
+              type: string
+            transactions:
+              type: array
+              items:
+                $ref: '#/definitions/Transaction'
